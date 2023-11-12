@@ -1,0 +1,16 @@
+.PanelDevice_section{
+
+}
+
+.PanelDevice_title{
+    font-size: 12px;
+}
+
+.PanelDevice_main{
+    display: grid;
+    grid-template-columns: 109px 109px;
+    width: 219px;
+    height: 192px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+}

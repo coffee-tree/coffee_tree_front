@@ -24,7 +24,6 @@ const Mapping = () => {
             });
             marker.setMap(map);
         })
-        console.log(coordinate);
     },[])
     return (
         <div className="map">

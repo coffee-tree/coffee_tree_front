@@ -1,0 +1,13 @@
+.PanelListLi_main{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.PanelListLi_status{
+    width: 35%;;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

@@ -1,0 +1,13 @@
+.PanelDeviceCount_main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.PanelDeviceCount_title{
+    font-size: 12px;
+}
+
+.PanelDeviceCount_count{
+    font-size: 48px;
+}
+
