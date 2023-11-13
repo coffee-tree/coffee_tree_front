@@ -10,7 +10,7 @@ import "./Panel.css"
 
 const Panel = () =>{
     return (
-        <section className="panel">
+      <section className="panel">
             <PanelTitle/>
             <PanelForm/>
             <PanelDevice/>
