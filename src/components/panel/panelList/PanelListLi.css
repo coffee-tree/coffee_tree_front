@@ -1,0 +1,18 @@
+.PanelListLi_li{
+    display: flex;
+    width: 180px;
+    height: 11px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 10px;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.PanelListLi_status{
+    display: flex;
+    align-items: center;
+}
+

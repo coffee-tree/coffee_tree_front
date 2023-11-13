@@ -1,4 +1,9 @@
 .panel{
-    width:800px;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 4%;
+    justify-content: space-evenly;
+    background-color: #F1F1F1;
+    min-width: 400px;
+    height:100vh;
 }

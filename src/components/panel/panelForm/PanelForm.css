@@ -1,0 +1,9 @@
+.PanelForm_input{
+    width: 280px;
+    height: 34px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.46);
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 5px;
+}
