@@ -19,6 +19,7 @@ const Mapping = () => {
             ele.setMap(map);
         })
     },[])
+
     return (
         <div className="map">
 
