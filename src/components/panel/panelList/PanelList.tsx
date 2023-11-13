@@ -38,9 +38,11 @@ const PanelList = () =>{
             </p>
             <div className="PanelList_main">
                 <div className="PanelListLi_title"><span>Device ID</span><span>Status</span></div>
-                {List_test.map(ele=>(
-                   <PanelListLi key={ele.id} id={ele.id} status={ele.status}/> 
-                ))}
+                <div className="PanelListLi_main">
+                    {List_test.map(ele=>(
+                        <PanelListLi key={ele.id} id={ele.id} status={ele.status}/> 
+                    ))}
+                </div>
             </div>
         </section>
     )
