@@ -20,8 +20,6 @@ export const MapInterpolation = (prev:coordinate,next:coordinate):coordinate => 
     return {x:re_x,y:re_y}
 }
 
-
-
 export const MapMove = (map:kakao.maps.Map, Marker: Marker[],position:position) => {
     if(position.status===null)
         return
