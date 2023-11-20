@@ -6,7 +6,6 @@ declare global {
     }
 }
 
-
 const imageSrc = "./image/MapMarkerSvgGreen.svg";
 const imageSize = new window.kakao.maps.Size(16,16);
 const markerImage = new window.kakao.maps.MarkerImage(imageSrc, imageSize)
