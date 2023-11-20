@@ -12,10 +12,9 @@ declare global {
     }
 }
 
-export const MapInterpolation = (prev:coordinate,next:coordinate,inclination:number):coordinate => {
-    const re_x = prev.x>next.x?prev.x-0.8:prev.x+0.8;
+export const MapInterpolation = (prev:coordinate,next:coordinate):coordinate => {
+    const inclination = (prev.y-next.y)/(prev.x-next.x);
+    const re_x = prev.x>next.x?prev.x-0.5:prev.x+0.5;
     const re_y = inclination*(re_x-prev.x) + prev.y;
     return {x:re_x,y:re_y}
 }
-
-export const Mapinclination = (prev:coordinate,next:coordinate) => (prev.y-next.y)/(prev.x-next.x)
