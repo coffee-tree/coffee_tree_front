@@ -6,7 +6,7 @@ import "./MainPage.css"
 const MainPage = () => {
     return (
         <div className="main">
-
+            <Panel/>
             <Mapping/>
         </div>
     )
