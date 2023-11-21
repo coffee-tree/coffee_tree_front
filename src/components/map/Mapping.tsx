@@ -1,4 +1,4 @@
-import React ,{useEffect} from "react";
+import React ,{useEffect,useState} from "react";
 import Marker from "./Marker";
 import { MapMove } from "./Maputil/MapUtil";
 import usePosition from "../../hook/usePosition";
@@ -12,6 +12,7 @@ declare global {
   }
 const Mapping = () => {
     const position = usePosition();
+    const [newMap,setNewMap] = useState<kakao.maps.Map>();
     useEffect(()=>{
         const [Marker1,Marker2] = Marker;
         const mapContainer = document.querySelector(".map");
@@ -20,11 +21,13 @@ const Mapping = () => {
             level: 3,
         };
         const map = new window.kakao.maps.Map(mapContainer, mapOption);
-        map.setDraggable(false);
+        setNewMap(map);
+        //map.setDraggable(false);
         Marker1.marker.setMap(map);
         Marker2.marker.setMap(map);
-        MapMove(map,Marker,position);
-    },[position])
+    },[])
+    if(newMap)
+        MapMove(newMap,Marker,position);
     return (
         <div className="map">
         </div>
