@@ -49,12 +49,12 @@ export const MapMove = (map:kakao.maps.Map, Marker: Marker[],position:position) 
         prev.x = new_prev.x;
         prev.y = new_prev.y;
         new_marker.setPosition(screen);
-        if(Math.round(new_prev.x)!==next.x)
-            window.requestAnimationFrame(markerMove);
         if(isNaN(new_marker.getPosition().getLat())||isNaN(new_marker.getPosition().getLng())){
             MapCheck(position,Marker);
             return
         }
+        if(Math.round(new_prev.x)!==next.x)
+            window.requestAnimationFrame(markerMove);
     }
     window.requestAnimationFrame(markerMove);
 }

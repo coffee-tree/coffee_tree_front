@@ -7,3 +7,9 @@
     min-width: 400px;
     height:100vh;
 }
+
+@media (max-height: 800px) {
+    .main{
+        height: 70vh;
+    }
+}
