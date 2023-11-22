@@ -21,7 +21,6 @@ KAKAO MAP API MARKER 움직이기
 requestAnimationFrame, interpolation 고려
 mapProjection.pointFromCoords() -> 스크린 좌표를 변환
 mapProjection.coordsFromPoint() -> 지도 좌표로 변환
-
 #### map의 두 좌표간의 interpolation을 구하기 함수 -> 간단하게 일차함수로 구현했습니다.
 
 ```
