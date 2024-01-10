@@ -23,6 +23,7 @@ mapProjection.pointFromCoords() -> 스크린 좌표를 변환
 mapProjection.coordsFromPoint() -> 지도 좌표로 변환
 #### map의 두 좌표간의 interpolation을 구하기 함수 -> 간단하게 일차함수로 구현했습니다.
 
+
 ```js
 export const MapInterpolation = (prev:coordinate,next:coordinate):coordinate => {
     const inclination = (prev.y-next.y)/(prev.x-next.x);
@@ -33,6 +34,7 @@ export const MapInterpolation = (prev:coordinate,next:coordinate):coordinate => 
 ```
 
 #### 마커 이동 애니메이션
+
 
 ```js
   let prev = mapProjection.pointFromCoords(new_marker.getPosition());//screen 좌표변환
