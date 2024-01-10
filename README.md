@@ -8,7 +8,7 @@ iot, ai를 접목시켜 다회용품의 수거율을 높이기 위해 개발하�
 
 ### 문제상황
 
-iot의 실시간 좌표를 받아 지도를 다시 reload하는 방식은 점멸현상이 생겨 사용자가 보기에 부담이 있어습니다. 이를 위해 마커가 자연스럽게 움직이는 함수를 개발하였습니다.
+iot의 실시간 좌표를 받아 지도에 다시 reload하는 방식은 마커가 자연스럽게 이동하지 않는 문제가 있어 사용자가 보기에 부담이 있습니다. 이를 위해 마커가 자연스럽게 움직이는 함수를 개발하였습니다. 
 
 ### 코드 정리
 
@@ -23,7 +23,8 @@ mapProjection.pointFromCoords() -> 스크린 좌표를 변환
 mapProjection.coordsFromPoint() -> 지도 좌표로 변환
 #### map의 두 좌표간의 interpolation을 구하기 함수 -> 간단하게 일차함수로 구현했습니다.
 
-```
+
+```js
 export const MapInterpolation = (prev:coordinate,next:coordinate):coordinate => {
     const inclination = (prev.y-next.y)/(prev.x-next.x);
     const re_x = prev.x>next.x?prev.x-0.5:prev.x+0.5;
@@ -34,7 +35,8 @@ export const MapInterpolation = (prev:coordinate,next:coordinate):coordinate => 
 
 #### 마커 이동 애니메이션
 
-```
+
+```js
   let prev = mapProjection.pointFromCoords(new_marker.getPosition());//screen 좌표변환
   let next = mapProjection.pointFromCoords(new window.kakao.maps.LatLng(position.x,position.y));//screen 좌표변환
   const markerMove = () => {
